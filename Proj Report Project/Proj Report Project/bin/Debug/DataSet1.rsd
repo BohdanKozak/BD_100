@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Project'[Project Id], 'Dim Project'[Name], 'Dim Project'[Difficulty Category], 'Dim Agreement'[Agreement Id], 'Dim Agreement'[Contract Category], "Total Cost", [Total Cost])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Project</DimensionName>
+                    <HierarchyName>Project Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Project].[Project Id]</HierarchyUniqueName>
+                    <LevelName>Project Id</LevelName>
+                    <UniqueName>[Dim Project].[Project Id].[Project Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Project Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Project</DimensionName>
+                    <HierarchyName>Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Project].[Name]</HierarchyUniqueName>
+                    <LevelName>Name</LevelName>
+                    <UniqueName>[Dim Project].[Name].[Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Project</DimensionName>
+                    <HierarchyName>Difficulty Category</HierarchyName>
+                    <HierarchyUniqueName>[Dim Project].[Difficulty Category]</HierarchyUniqueName>
+                    <LevelName>Difficulty Category</LevelName>
+                    <UniqueName>[Dim Project].[Difficulty Category].[Difficulty Category]</UniqueName>
+                  </ID>
+                  <ItemCaption>Difficulty Category</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Agreement</DimensionName>
+                    <HierarchyName>Agreement Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Agreement].[Agreement Id]</HierarchyUniqueName>
+                    <LevelName>Agreement Id</LevelName>
+                    <UniqueName>[Dim Agreement].[Agreement Id].[Agreement Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Agreement Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Agreement</DimensionName>
+                    <HierarchyName>Contract Category</HierarchyName>
+                    <HierarchyUniqueName>[Dim Agreement].[Contract Category]</HierarchyUniqueName>
+                    <LevelName>Contract Category</LevelName>
+                    <UniqueName>[Dim Agreement].[Contract Category].[Contract Category]</UniqueName>
+                  </ID>
+                  <ItemCaption>Contract Category</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Total Cost</MeasureName>
+                    <UniqueName>[Measures].[Total Cost]</UniqueName>
+                  </ID>
+                  <ItemCaption>Total Cost</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Projects DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Project'[Project Id], 'Dim Project'[Name], 'Dim Project'[Difficulty Category], 'Dim Agreement'[Agreement Id], 'Dim Agreement'[Contract Category], "Total Cost", [Total Cost])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Project_Id">
+        <DataField>Dim Project[Project Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Dim Project[Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Difficulty_Category">
+        <DataField>Dim Project[Difficulty Category]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Agreement_Id">
+        <DataField>Dim Agreement[Agreement Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Contract_Category">
+        <DataField>Dim Agreement[Contract Category]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Total_Cost">
+        <DataField>[Total Cost]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-21RFT4C_BODYASQL.ProjectsDW"
+  DTS:DTSID="{B50FC6C0-F533-4C36-B812-E036E183960C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-21RFT4C\BODYASQL;Initial Catalog=ProjectsDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Project Integration Services Project-{B50FC6C0-F533-4C36-B812-E036E183960C}DESKTOP-21RFT4C\BODYASQL.ProjectsDW;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet4">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Performer'[Performer Id], 'Dim Performer'[Name], 'Dim Performer'[Time Rate], 'Dim Project'[Project Id], 'Dim Project'[Planned Duration], "Hours Worked", [Hours Worked], "Payment Sum", [Payment Sum])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Performer Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Performer Id]</HierarchyUniqueName>
+                    <LevelName>Performer Id</LevelName>
+                    <UniqueName>[Dim Performer].[Performer Id].[Performer Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Performer Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Name]</HierarchyUniqueName>
+                    <LevelName>Name</LevelName>
+                    <UniqueName>[Dim Performer].[Name].[Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Time Rate</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Time Rate]</HierarchyUniqueName>
+                    <LevelName>Time Rate</LevelName>
+                    <UniqueName>[Dim Performer].[Time Rate].[Time Rate]</UniqueName>
+                  </ID>
+                  <ItemCaption>Time Rate</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Project</DimensionName>
+                    <HierarchyName>Project Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Project].[Project Id]</HierarchyUniqueName>
+                    <LevelName>Project Id</LevelName>
+                    <UniqueName>[Dim Project].[Project Id].[Project Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Project Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Project</DimensionName>
+                    <HierarchyName>Planned Duration</HierarchyName>
+                    <HierarchyUniqueName>[Dim Project].[Planned Duration]</HierarchyUniqueName>
+                    <LevelName>Planned Duration</LevelName>
+                    <UniqueName>[Dim Project].[Planned Duration].[Planned Duration]</UniqueName>
+                  </ID>
+                  <ItemCaption>Planned Duration</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Hours Worked</MeasureName>
+                    <UniqueName>[Measures].[Hours Worked]</UniqueName>
+                  </ID>
+                  <ItemCaption>Hours Worked</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Payment Sum</MeasureName>
+                    <UniqueName>[Measures].[Payment Sum]</UniqueName>
+                  </ID>
+                  <ItemCaption>Payment Sum</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Projects DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Performer'[Performer Id], 'Dim Performer'[Name], 'Dim Performer'[Time Rate], 'Dim Project'[Project Id], 'Dim Project'[Planned Duration], "Hours Worked", [Hours Worked], "Payment Sum", [Payment Sum])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Performer_Id">
+        <DataField>Dim Performer[Performer Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Dim Performer[Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Time_Rate">
+        <DataField>Dim Performer[Time Rate]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Project_Id">
+        <DataField>Dim Project[Project Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Planned_Duration">
+        <DataField>Dim Project[Planned Duration]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Hours_Worked">
+        <DataField>[Hours Worked]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Payment_Sum">
+        <DataField>[Payment Sum]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

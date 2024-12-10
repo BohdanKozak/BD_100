@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Performer'[Performer Id], 'Dim Performer'[Name], 'Dim Performer'[Post], 'Dim Date'[Date Id], 'Dim Date'[Date], "Payment Sum", [Payment Sum])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Performer Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Performer Id]</HierarchyUniqueName>
+                    <LevelName>Performer Id</LevelName>
+                    <UniqueName>[Dim Performer].[Performer Id].[Performer Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Performer Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Name]</HierarchyUniqueName>
+                    <LevelName>Name</LevelName>
+                    <UniqueName>[Dim Performer].[Name].[Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Performer</DimensionName>
+                    <HierarchyName>Post</HierarchyName>
+                    <HierarchyUniqueName>[Dim Performer].[Post]</HierarchyUniqueName>
+                    <LevelName>Post</LevelName>
+                    <UniqueName>[Dim Performer].[Post].[Post]</UniqueName>
+                  </ID>
+                  <ItemCaption>Post</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Date Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Date Id]</HierarchyUniqueName>
+                    <LevelName>Date Id</LevelName>
+                    <UniqueName>[Dim Date].[Date Id].[Date Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Date</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Date]</HierarchyUniqueName>
+                    <LevelName>Date</LevelName>
+                    <UniqueName>[Dim Date].[Date].[Date]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Payment Sum</MeasureName>
+                    <UniqueName>[Measures].[Payment Sum]</UniqueName>
+                  </ID>
+                  <ItemCaption>Payment Sum</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Projects DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Performer'[Performer Id], 'Dim Performer'[Name], 'Dim Performer'[Post], 'Dim Date'[Date Id], 'Dim Date'[Date], "Payment Sum", [Payment Sum])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Performer_Id">
+        <DataField>Dim Performer[Performer Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Dim Performer[Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Post">
+        <DataField>Dim Performer[Post]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Date_Id">
+        <DataField>Dim Date[Date Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Date">
+        <DataField>Dim Date[Date]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Payment_Sum">
+        <DataField>[Payment Sum]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
